@@ -260,7 +260,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/25/%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="pluto lai">
@@ -279,7 +279,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" itemprop="url">hexo搭建个人博客</a></h1>
+                <a class="post-title-link" href="/2020/01/25/%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" itemprop="url">文章中插入图片</a></h1>
         
 
         <div class="post-meta">
@@ -291,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-24T18:42:26+08:00">
-                2020-01-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-25T19:26:09+08:00">
+                2020-01-25
               </time>
             
 
@@ -353,9 +353,18 @@
       
         
           
-            <h2 id="本地安装hexo"><a href="#本地安装hexo" class="headerlink" title="本地安装hexo"></a>本地安装hexo</h2><p>首先需要保证电脑上有node环境。</p>
-<p>node官网：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p>
-<p>控制台输入<code>node -v</code> 出现版本号说明安装成功。</p>
+            <h2 id="hexo引入本地图片"><a href="#hexo引入本地图片" class="headerlink" title="hexo引入本地图片"></a>hexo引入本地图片</h2><p>1、把站点配置文件_config.yml里的<code>post_asset_folder</code>这个选项设置为true。设置完这个参数之后，每次new命令创建文章的时候就会生成同名的资源文件夹，部署的时候就会把资源文件同步上传到文章目录下。</p>
+<img src="/2020/01/25/%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/1.png" class="">
+
+<p>2、使用官方提供的标签</p>
+<p>假设我们要插入一张1.jpg的图片，就先将图片复制到同名目录下，然后在需要插入图片的地方插入标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img a.jpg [图片描述] %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>图片就能完美的显示啦。</p>
+<p>官方给出的建议是使用标签插入而非markdown方式，使用markdown方式会导致在首页或者归档页上无法正常显示图片。我试了一下在首页上图片确实没有显示出来。</p>
+<h2 id="遇到的一些坑"><a href="#遇到的一些坑" class="headerlink" title="遇到的一些坑"></a>遇到的一些坑</h2><p>刚开始在网上找资料的时候，大多数教程都写的使用<code>hexo-asset-image</code>这个插件。我安装之后根本就用不了呀，想到有可能是路径问题或者是版本兼容问题。我按照这个方向去查找问题，路径试了个遍发现图片在markdown上能正常显示，在网页上就是显示不出来。于是百度查了一下，这才了解到在官网里显示最新版本的hexo已经加入了图片标签的支持。</p>
+<p><strong>总结：</strong>有问题还是多去看看官网呀！！！折腾了老半天，心累o(╥﹏╥)o</p>
+<p>官网链接：<a href="https://hexo.io/zh-cn/docs/asset-folders" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/asset-folders</a></p>
 
           
         
@@ -404,7 +413,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/24/%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="pluto lai">
@@ -423,7 +432,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/01/24/%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE/" itemprop="url">站点配置</a></h1>
+                <a class="post-title-link" href="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" itemprop="url">hexo搭建个人博客</a></h1>
         
 
         <div class="post-meta">
@@ -435,7 +444,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-24T17:57:46+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-24T23:37:50+08:00">
                 2020-01-24
               </time>
             
@@ -497,8 +506,65 @@
       
         
           
-            <p>博客搭建教程</p>
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>正所谓工欲善其事必先利其器，在开始正式搭建博客前我们需要给我们的电脑部署好坏境，以便于我们能愉快的搭建博客环境</p>
+<h4 id="1、安装git"><a href="#1、安装git" class="headerlink" title="1、安装git"></a>1、安装git</h4><ul>
+<li>下载地址：<a href="https://gitforwindows.org/" target="_blank" rel="noopener">https://gitforwindows.org/</a></li>
+<li>安装步骤：双击下载好的.exe文件，一路next就好啦</li>
+<li>安装好后，打开git bash输入<code>git version</code>,查看到当前安装的版本号就说明安装成功啦</li>
+</ul>
+<h4 id="2、安装node"><a href="#2、安装node" class="headerlink" title="2、安装node"></a>2、安装node</h4><p>hexo是基于nodeJS环境的，并且接下来的很多工作都需要用到node中的npm工具</p>
+<ul>
+<li>node官网：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></li>
+<li>安装步骤：下载好msi文件后，双击打开安装，一路next，不过在Custom Setup这一步记得选 <code>Add to PATH</code> ,这样你就不用自己去配置电脑上环境变量了</li>
+<li>控制台输入<code>node -v</code> 出现版本号说明安装成功</li>
+</ul>
+<h4 id="3、安装hexo"><a href="#3、安装hexo" class="headerlink" title="3、安装hexo"></a>3、安装hexo</h4><p>做完以上两个步骤后我们就可以愉快的安装hexo啦</p>
+<ul>
+<li><p>先创建好一个文件夹（用来存放所有blog的东西），然后打开git bash进入到该文件夹中</p>
+</li>
+<li><p>安装hexo命令：<code>npm i -g hexo</code></p>
+</li>
+<li><p>输入<code>hexo -v</code>，出现版本号说明安装成功</p>
+</li>
+<li><p>初始化命令：<code>hexo init</code>,初始化完成后你会发现你的文件夹里多了一下的文件</p>
+<img src="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/Snipaste_2020-10-18_23-10-23.png" class="" title="[ssh key]">
 
+
+
+</li>
+</ul>
+<p>  <strong>补充说明：</strong></p>
+<ul>
+<li>node_modules：依赖包</li>
+<li>public：存放的是生成的页面</li>
+<li>scaffolds：命令生成文章等的模板</li>
+<li>source：用命令创建的各种文章</li>
+<li>themes：主题</li>
+<li>_config.yml：整个博客的配置</li>
+<li>db.json：source解析所得到的</li>
+<li>package.json：项目所需模块项目的配置信息</li>
+</ul>
+<h2 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h2><h3 id="创建github仓库"><a href="#创建github仓库" class="headerlink" title="创建github仓库"></a>创建github仓库</h3><p>在github上创建一个repo，名称为<code>yourname.github.io</code>，其中yourname是github的名称。必须按照这个规则去创建才会生效。</p>
+<img src="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1.png" class="" title="[github仓库命名]">
+
+<h3 id="github配置ssh-key"><a href="#github配置ssh-key" class="headerlink" title="github配置ssh key"></a>github配置ssh key</h3><h4 id="设置git的user-name和email"><a href="#设置git的user-name和email" class="headerlink" title="设置git的user name和email"></a>设置git的user name和email</h4><p>首先保证电脑上安装了git。git的安装自行百度。</p>
+<p>执行如下命令，配置git的user name和email。自行替换相应的字段。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"pluto.lai"</span></span><br><span class="line">git config --global user.email  <span class="string">"galaxy__lxh@163.com"</span></span><br></pre></td></tr></table></figure>
+
+<p>使用<code>git config --list</code>查看当前git环境所有配置</p>
+<h4 id="检查是否存在SSH-Key"><a href="#检查是否存在SSH-Key" class="headerlink" title="检查是否存在SSH Key"></a>检查是否存在SSH Key</h4><p>输入<code>cd ~/.ssh</code></p>
+<img src="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/2.png" class="" title="[检查ssh key]">
+
+<p>如果不存在ssh key，则需要先生成</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"galaxy__lxh@163.com"</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="获取SSH-Key"><a href="#获取SSH-Key" class="headerlink" title="获取SSH Key"></a>获取SSH Key</h4><p>输入<code>cat id_rsa.pub</code>，得到秘钥如下图，</p>
+<img src="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/2.png" class="" title="[ssh key]">
+
+<h4 id="github添加SSH-Key"><a href="#github添加SSH-Key" class="headerlink" title="github添加SSH Key"></a>github添加SSH Key</h4><p>参考文章：<a href="https://blog.csdn.net/u013778905/article/details/83501204" target="_blank" rel="noopener">https://blog.csdn.net/u013778905/article/details/83501204</a></p>
+<h3 id="修改-config-yml中的git配置"><a href="#修改-config-yml中的git配置" class="headerlink" title="修改_config.yml中的git配置"></a>修改_config.yml中的git配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">'git'</span></span><br><span class="line">  repo: git@github.com:Pluto-lxh/Pluto-lxh.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h2 id="部署上传"><a href="#部署上传" class="headerlink" title="部署上传"></a>部署上传</h2>
           
         
       
@@ -605,7 +671,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

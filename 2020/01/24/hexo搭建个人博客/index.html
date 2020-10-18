@@ -79,17 +79,22 @@
 
 
 
-<meta name="description" content="本地安装hexo首先需要保证电脑上有node环境。 node官网：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; 控制台输入node -v 出现版本号说明安装成功。">
+<meta name="description" content="前言正所谓工欲善其事必先利其器，在开始正式搭建博客前我们需要给我们的电脑部署好坏境，以便于我们能愉快的搭建博客环境 1、安装git 下载地址：https:&#x2F;&#x2F;gitforwindows.org&#x2F; 安装步骤：双击下载好的.exe文件，一路next就好啦 安装好后，打开git bash输入git version,查看到当前安装的版本号就说明安装成功啦  2、安装nodehexo是基于nodeJS环境的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo搭建个人博客">
 <meta property="og:url" content="http://yoursite.com/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="本地安装hexo首先需要保证电脑上有node环境。 node官网：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F; 控制台输入node -v 出现版本号说明安装成功。">
-<meta property="article:published_time" content="2020-01-24T10:42:26.000Z">
-<meta property="article:modified_time" content="2020-01-24T10:51:33.736Z">
+<meta property="og:description" content="前言正所谓工欲善其事必先利其器，在开始正式搭建博客前我们需要给我们的电脑部署好坏境，以便于我们能愉快的搭建博客环境 1、安装git 下载地址：https:&#x2F;&#x2F;gitforwindows.org&#x2F; 安装步骤：双击下载好的.exe文件，一路next就好啦 安装好后，打开git bash输入git version,查看到当前安装的版本号就说明安装成功啦  2、安装nodehexo是基于nodeJS环境的">
+<meta property="og:image" content="http://yoursite.com/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/Snipaste_2020-10-18_23-10-23.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/2.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/2.png">
+<meta property="article:published_time" content="2020-01-24T15:37:50.000Z">
+<meta property="article:modified_time" content="2020-10-18T15:20:52.448Z">
 <meta property="article:author" content="pluto lai">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/Snipaste_2020-10-18_23-10-23.png">
 
 
 
@@ -291,7 +296,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-24T18:42:26+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-24T23:37:50+08:00">
                 2020-01-24
               </time>
             
@@ -351,10 +356,65 @@
       
 
       
-        <h2 id="本地安装hexo"><a href="#本地安装hexo" class="headerlink" title="本地安装hexo"></a>本地安装hexo</h2><p>首先需要保证电脑上有node环境。</p>
-<p>node官网：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p>
-<p>控制台输入<code>node -v</code> 出现版本号说明安装成功。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>正所谓工欲善其事必先利其器，在开始正式搭建博客前我们需要给我们的电脑部署好坏境，以便于我们能愉快的搭建博客环境</p>
+<h4 id="1、安装git"><a href="#1、安装git" class="headerlink" title="1、安装git"></a>1、安装git</h4><ul>
+<li>下载地址：<a href="https://gitforwindows.org/" target="_blank" rel="noopener">https://gitforwindows.org/</a></li>
+<li>安装步骤：双击下载好的.exe文件，一路next就好啦</li>
+<li>安装好后，打开git bash输入<code>git version</code>,查看到当前安装的版本号就说明安装成功啦</li>
+</ul>
+<h4 id="2、安装node"><a href="#2、安装node" class="headerlink" title="2、安装node"></a>2、安装node</h4><p>hexo是基于nodeJS环境的，并且接下来的很多工作都需要用到node中的npm工具</p>
+<ul>
+<li>node官网：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></li>
+<li>安装步骤：下载好msi文件后，双击打开安装，一路next，不过在Custom Setup这一步记得选 <code>Add to PATH</code> ,这样你就不用自己去配置电脑上环境变量了</li>
+<li>控制台输入<code>node -v</code> 出现版本号说明安装成功</li>
+</ul>
+<h4 id="3、安装hexo"><a href="#3、安装hexo" class="headerlink" title="3、安装hexo"></a>3、安装hexo</h4><p>做完以上两个步骤后我们就可以愉快的安装hexo啦</p>
+<ul>
+<li><p>先创建好一个文件夹（用来存放所有blog的东西），然后打开git bash进入到该文件夹中</p>
+</li>
+<li><p>安装hexo命令：<code>npm i -g hexo</code></p>
+</li>
+<li><p>输入<code>hexo -v</code>，出现版本号说明安装成功</p>
+</li>
+<li><p>初始化命令：<code>hexo init</code>,初始化完成后你会发现你的文件夹里多了一下的文件</p>
+<img src="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/Snipaste_2020-10-18_23-10-23.png" class="" title="[ssh key]">
 
+
+
+</li>
+</ul>
+<p>  <strong>补充说明：</strong></p>
+<ul>
+<li>node_modules：依赖包</li>
+<li>public：存放的是生成的页面</li>
+<li>scaffolds：命令生成文章等的模板</li>
+<li>source：用命令创建的各种文章</li>
+<li>themes：主题</li>
+<li>_config.yml：整个博客的配置</li>
+<li>db.json：source解析所得到的</li>
+<li>package.json：项目所需模块项目的配置信息</li>
+</ul>
+<h2 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h2><h3 id="创建github仓库"><a href="#创建github仓库" class="headerlink" title="创建github仓库"></a>创建github仓库</h3><p>在github上创建一个repo，名称为<code>yourname.github.io</code>，其中yourname是github的名称。必须按照这个规则去创建才会生效。</p>
+<img src="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1.png" class="" title="[github仓库命名]">
+
+<h3 id="github配置ssh-key"><a href="#github配置ssh-key" class="headerlink" title="github配置ssh key"></a>github配置ssh key</h3><h4 id="设置git的user-name和email"><a href="#设置git的user-name和email" class="headerlink" title="设置git的user name和email"></a>设置git的user name和email</h4><p>首先保证电脑上安装了git。git的安装自行百度。</p>
+<p>执行如下命令，配置git的user name和email。自行替换相应的字段。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"pluto.lai"</span></span><br><span class="line">git config --global user.email  <span class="string">"galaxy__lxh@163.com"</span></span><br></pre></td></tr></table></figure>
+
+<p>使用<code>git config --list</code>查看当前git环境所有配置</p>
+<h4 id="检查是否存在SSH-Key"><a href="#检查是否存在SSH-Key" class="headerlink" title="检查是否存在SSH Key"></a>检查是否存在SSH Key</h4><p>输入<code>cd ~/.ssh</code></p>
+<img src="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/2.png" class="" title="[检查ssh key]">
+
+<p>如果不存在ssh key，则需要先生成</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"galaxy__lxh@163.com"</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="获取SSH-Key"><a href="#获取SSH-Key" class="headerlink" title="获取SSH Key"></a>获取SSH Key</h4><p>输入<code>cat id_rsa.pub</code>，得到秘钥如下图，</p>
+<img src="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/2.png" class="" title="[ssh key]">
+
+<h4 id="github添加SSH-Key"><a href="#github添加SSH-Key" class="headerlink" title="github添加SSH Key"></a>github添加SSH Key</h4><p>参考文章：<a href="https://blog.csdn.net/u013778905/article/details/83501204" target="_blank" rel="noopener">https://blog.csdn.net/u013778905/article/details/83501204</a></p>
+<h3 id="修改-config-yml中的git配置"><a href="#修改-config-yml中的git配置" class="headerlink" title="修改_config.yml中的git配置"></a>修改_config.yml中的git配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">'git'</span></span><br><span class="line">  repo: git@github.com:Pluto-lxh/Pluto-lxh.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h2 id="部署上传"><a href="#部署上传" class="headerlink" title="部署上传"></a>部署上传</h2>
       
     </div>
     
@@ -384,15 +444,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/24/%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE/" rel="next" title="站点配置">
-                <i class="fa fa-chevron-left"></i> 站点配置
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/01/25/%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" rel="prev" title="文章中插入图片">
+                文章中插入图片 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -495,7 +555,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -538,7 +598,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地安装hexo"><span class="nav-number">1.</span> <span class="nav-text">本地安装hexo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、安装git"><span class="nav-number">1.0.1.</span> <span class="nav-text">1、安装git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、安装node"><span class="nav-number">1.0.2.</span> <span class="nav-text">2、安装node</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、安装hexo"><span class="nav-number">1.0.3.</span> <span class="nav-text">3、安装hexo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#github配置"><span class="nav-number">2.</span> <span class="nav-text">github配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建github仓库"><span class="nav-number">2.1.</span> <span class="nav-text">创建github仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github配置ssh-key"><span class="nav-number">2.2.</span> <span class="nav-text">github配置ssh key</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#设置git的user-name和email"><span class="nav-number">2.2.1.</span> <span class="nav-text">设置git的user name和email</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#检查是否存在SSH-Key"><span class="nav-number">2.2.2.</span> <span class="nav-text">检查是否存在SSH Key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取SSH-Key"><span class="nav-number">2.2.3.</span> <span class="nav-text">获取SSH Key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#github添加SSH-Key"><span class="nav-number">2.2.4.</span> <span class="nav-text">github添加SSH Key</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改-config-yml中的git配置"><span class="nav-number">2.3.</span> <span class="nav-text">修改_config.yml中的git配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署上传"><span class="nav-number">3.</span> <span class="nav-text">部署上传</span></a></li></ol></div>
             
 
           </div>
