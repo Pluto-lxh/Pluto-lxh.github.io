@@ -506,19 +506,19 @@
       
         
           
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>正所谓工欲善其事必先利其器，在开始正式搭建博客前我们需要给我们的电脑部署好坏境，以便于我们能愉快的搭建博客环境</p>
-<h4 id="1、安装git"><a href="#1、安装git" class="headerlink" title="1、安装git"></a>1、安装git</h4><ul>
+            <h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><p>正所谓工欲善其事必先利其器，在开始正式搭建博客前我们需要给我们的电脑部署好坏境，以便于我们能愉快的搭建博客环境</p>
+<h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><ul>
 <li>下载地址：<a href="https://gitforwindows.org/" target="_blank" rel="noopener">https://gitforwindows.org/</a></li>
 <li>安装步骤：双击下载好的.exe文件，一路next就好啦</li>
 <li>安装好后，打开git bash输入<code>git version</code>,查看到当前安装的版本号就说明安装成功啦</li>
 </ul>
-<h4 id="2、安装node"><a href="#2、安装node" class="headerlink" title="2、安装node"></a>2、安装node</h4><p>hexo是基于nodeJS环境的，并且接下来的很多工作都需要用到node中的npm工具</p>
+<h4 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h4><p>hexo是基于nodeJS环境的，并且接下来的很多工作都需要用到node中的npm工具</p>
 <ul>
 <li>node官网：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></li>
 <li>安装步骤：下载好msi文件后，双击打开安装，一路next，不过在Custom Setup这一步记得选 <code>Add to PATH</code> ,这样你就不用自己去配置电脑上环境变量了</li>
 <li>控制台输入<code>node -v</code> 出现版本号说明安装成功</li>
 </ul>
-<h4 id="3、安装hexo"><a href="#3、安装hexo" class="headerlink" title="3、安装hexo"></a>3、安装hexo</h4><p>做完以上两个步骤后我们就可以愉快的安装hexo啦</p>
+<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><p>做完以上两个步骤后我们就可以愉快的安装hexo啦</p>
 <ul>
 <li><p>先创建好一个文件夹（用来存放所有blog的东西），然后打开git bash进入到该文件夹中</p>
 </li>
@@ -527,7 +527,7 @@
 <li><p>输入<code>hexo -v</code>，出现版本号说明安装成功</p>
 </li>
 <li><p>初始化命令：<code>hexo init</code>,初始化完成后你会发现你的文件夹里多了一下的文件</p>
-<img src="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/Snipaste_2020-10-18_23-10-23.png" class="" title="[ssh key]">
+<img src="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/Snipaste_2020-10-18_23-10-23.png" class="" title="[blog文件夹]">
 
 
 
@@ -544,27 +544,51 @@
 <li>db.json：source解析所得到的</li>
 <li>package.json：项目所需模块项目的配置信息</li>
 </ul>
-<h2 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h2><h3 id="创建github仓库"><a href="#创建github仓库" class="headerlink" title="创建github仓库"></a>创建github仓库</h3><p>在github上创建一个repo，名称为<code>yourname.github.io</code>，其中yourname是github的名称。必须按照这个规则去创建才会生效。</p>
+<h3 id="github配置"><a href="#github配置" class="headerlink" title="github配置"></a>github配置</h3><h4 id="创建github仓库"><a href="#创建github仓库" class="headerlink" title="创建github仓库"></a>创建github仓库</h4><p>在github上创建一个repo，名称为<code>yourname.github.io</code>，其中yourname是github的名称。必须按照这个规则去创建才会生效。</p>
 <img src="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1.png" class="" title="[github仓库命名]">
 
-<h3 id="github配置ssh-key"><a href="#github配置ssh-key" class="headerlink" title="github配置ssh key"></a>github配置ssh key</h3><h4 id="设置git的user-name和email"><a href="#设置git的user-name和email" class="headerlink" title="设置git的user name和email"></a>设置git的user name和email</h4><p>首先保证电脑上安装了git</p>
+<h4 id="github配置ssh-key"><a href="#github配置ssh-key" class="headerlink" title="github配置ssh key"></a>github配置ssh key</h4><p><strong>1、设置git的user name和email</strong></p>
+<p>首先保证电脑上安装了git</p>
 <p>执行如下命令，配置git的user name和email。自行替换相应的字段。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"pluto.lai"</span></span><br><span class="line">git config --global user.email  <span class="string">"galaxy__lxh@163.com"</span></span><br></pre></td></tr></table></figure>
 
 <p>使用<code>git config --list</code>查看当前git环境所有配置</p>
-<h4 id="检查是否存在SSH-Key"><a href="#检查是否存在SSH-Key" class="headerlink" title="检查是否存在SSH Key"></a>检查是否存在SSH Key</h4><p>输入<code>cd ~/.ssh</code></p>
+<p><strong>2、检查是否存在SSH Key</strong></p>
+<p>输入<code>cd ~/.ssh</code></p>
 <img src="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/2.png" class="" title="[检查ssh key]">
 
 <p>如果不存在ssh key，则需要先生成</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"galaxy__lxh@163.com"</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="获取SSH-Key"><a href="#获取SSH-Key" class="headerlink" title="获取SSH Key"></a>获取SSH Key</h4><p>输入<code>cat id_rsa.pub</code>，得到秘钥如下图，</p>
+<p>获取SSH Key</p>
+<p>输入<code>cat id_rsa.pub</code>，得到秘钥如下图，</p>
 <img src="/2020/01/24/hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/2.png" class="" title="[ssh key]">
 
-<h4 id="github添加SSH-Key"><a href="#github添加SSH-Key" class="headerlink" title="github添加SSH Key"></a>github添加SSH Key</h4><p>参考文章：<a href="https://blog.csdn.net/u013778905/article/details/83501204" target="_blank" rel="noopener">https://blog.csdn.net/u013778905/article/details/83501204</a></p>
-<h3 id="修改-config-yml中的git配置"><a href="#修改-config-yml中的git配置" class="headerlink" title="修改_config.yml中的git配置"></a>修改_config.yml中的git配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">'git'</span></span><br><span class="line">  repo: git@github.com:Pluto-lxh/Pluto-lxh.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p><strong>3、github添加SSH Key</strong></p>
+<p>参考文章：<a href="https://blog.csdn.net/u013778905/article/details/83501204" target="_blank" rel="noopener">https://blog.csdn.net/u013778905/article/details/83501204</a></p>
+<h4 id="修改-config-yml中的git配置"><a href="#修改-config-yml中的git配置" class="headerlink" title="修改_config.yml中的git配置"></a>修改_config.yml中的git配置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">'git'</span></span><br><span class="line">  repo: git@github.com:Pluto-lxh/Pluto-lxh.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
-<h2 id="部署上传"><a href="#部署上传" class="headerlink" title="部署上传"></a>部署上传</h2>
+<h3 id="部署上传"><a href="#部署上传" class="headerlink" title="部署上传"></a>部署上传</h3><p>1、首先安装上传工具</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>2、依次执行以下命令（之后在本地里每次修改后都需要执行如下命令才能更新到github上）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean     //删除上次打包</span><br><span class="line">hexo generate   //打包</span><br><span class="line">hexo deploy    /上传</span><br></pre></td></tr></table></figure>
+
+<p>每次在本地写完文章后都需要重新打包后再发布，步骤极其繁琐。在反复查阅资料后发现了github上有一个自动部署功能Github Action，现在就来看看如何实现吧。</p>
+<p><strong>1、生成secrets</strong></p>
+<p>在生成secrets前首先要生成个人访问令牌</p>
+<p>创建令牌：点击个人资料里的setting—-&gt;在左侧边栏中找到Developer setting—–&gt;然后找到Personal access tokens，创建一个新的token。名字自由发挥，权限范围选择repo即可。</p>
+<p><strong>2、给github的blog项目配置secrets</strong></p>
+<p>打开github项目里的setting，找到secrets，name自由发挥，value填写刚刚生成的token值。</p>
+<p><strong>3、添加Action</strong></p>
+<p>首先点击github项目里的Action，然后New workflow</p>
+<p>在内容框里填入以下代码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># workflow name</span></span><br><span class="line">name: Hexo Blog CI</span><br><span class="line"></span><br><span class="line"><span class="comment"># master branch on push, auto run</span></span><br><span class="line">on: </span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">      - master</span><br><span class="line">      </span><br><span class="line"><span class="built_in">jobs</span>:</span><br><span class="line">  build: </span><br><span class="line">    runs-on: ubuntu-latest </span><br><span class="line">        </span><br><span class="line">    steps:</span><br><span class="line">    <span class="comment"># check it to your workflow can access it</span></span><br><span class="line">    <span class="comment"># from: https://github.com/actions/checkout</span></span><br><span class="line">    - name: Checkout Repository master branch</span><br><span class="line">      uses: actions/checkout@master </span><br><span class="line">      </span><br><span class="line">    <span class="comment"># from: https://github.com/actions/setup-node  </span></span><br><span class="line">    - name: Setup Node.js 10.x </span><br><span class="line">      uses: actions/setup-node@master</span><br><span class="line">      with:</span><br><span class="line">        node-version: <span class="string">"10.x"</span></span><br><span class="line">    </span><br><span class="line">    - name: Setup Hexo Dependencies</span><br><span class="line">      run: |</span><br><span class="line">        npm install hexo-cli -g</span><br><span class="line">        npm install</span><br><span class="line">    </span><br><span class="line">    - name: Setup Deploy Private Key</span><br><span class="line">      env:</span><br><span class="line">        HEXO_DEPLOY_PRIVATE_KEY: <span class="variable">$&#123;&#123; secrets.HEXO_DEPLOY_PRIVATE_KEY &#125;</span>&#125;</span><br><span class="line">      run: |</span><br><span class="line">        mkdir -p ~/.ssh/</span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"<span class="variable">$HEXO_DEPLOY_PRIVATE_KEY</span>"</span> &gt; ~/.ssh/id_rsa </span><br><span class="line">        chmod 600 ~/.ssh/id_rsa</span><br><span class="line">        ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts</span><br><span class="line">        </span><br><span class="line">    - name: Setup Git Infomation</span><br><span class="line">      run: | </span><br><span class="line">        git config --global user.name <span class="string">'名字'</span> </span><br><span class="line">        git config --global user.email <span class="string">'邮件'</span></span><br><span class="line">    - name: Deploy Hexo </span><br><span class="line">      run: |</span><br><span class="line">        hexo clean</span><br><span class="line">        hexo generate </span><br><span class="line">        hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>参考博客：</p>
+<p><a href="https://blog.csdn.net/u012208219/article/details/106883054" target="_blank" rel="noopener">https://blog.csdn.net/u012208219/article/details/106883054</a></p>
+<p><a href="https://blog.csdn.net/weixin_45178716/article/details/106416925" target="_blank" rel="noopener">https://blog.csdn.net/weixin_45178716/article/details/106416925</a></p>
+
           
         
       
